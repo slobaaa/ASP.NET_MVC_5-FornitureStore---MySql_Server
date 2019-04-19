@@ -1,0 +1,179 @@
+﻿@model IEnumerable<shanuMVCUserRoles.tblRacun>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@*Samo user moze da pravi racun*@
+@if (User.IsInRole("User"))
+{
+    <h2 class="text-primary">Kupovina</h2>
+    <br />
+    @*@Html.ActionLink("Kreiraj novi racun", "Create")*@
+    @Html.ActionLink("Kreiraj novi račun", "Create", new {@class = "btn btn-primary", @style = "color:white" })
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <h2 class="text-primary">Pregled računa</h2>
+    @*@Html.ActionLink("Export to pdf", "Reports", new { ReportType = "Pdf" })*@
+    @*@Html.ActionLink("Export to word", "Reports", new { ReportType = "Word" })*@
+    @*@Html.ActionLink("Export to image", "Reports", new { ReportType = "image" })*@
+}
+
+@if (User.IsInRole("Admin"))
+{ 
+@*<table class="table table-striped table-hover" id="tblRacun">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojRacuna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tblKomadNamestaja.Sifra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumIVremeKupovine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CenaBezPdv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porez)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UkupnaCenaSaPorezom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KupacKojiJeKupioRobu)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.tblSalon.Naziv)
+            </th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BrojRacuna)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblKomadNamestaja.Sifra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatumIVremeKupovine)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CenaBezPdv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porez)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UkupnaCenaSaPorezom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KupacKojiJeKupioRobu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblSalon.Naziv)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.RacunId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.RacunId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.RacunId })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+            <th>Ukupno sa pdv:</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>*@
+    <div class="col-md-3">
+        <label for="racunDropdownAdmin"><b>Izaberite redni broj racuna:</b></label>
+        <select class="form-control" id="racunDropdownAdmin" name="racunDropdownAdmin" onchange="uzmiBrojRacunaZaAdmina()"></select>
+    </div>
+<br /><br /><br />
+    //tabela za ispis racuna
+    <div class="container" id="zaStampuRacunZaAdmina">
+        <div class="row">
+            <h3>Kupac: <span class="kupacZaRacunZaAdmina text-primary"></span></h3>
+            <h3>Datum i vreme kupovine: <span class="datumZaRacunZaAdmina text-primary"></span></h3>
+            <h3>Salon u kom je izvrsena kupovina: <span class="salonZaRacunZaAdmina text-primary"></span></h3>
+            <br />
+            <table id="tabelaIspisRacunaPosleIzboraBrojaRacuna" class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Komad namestaja</th>
+                        <th>Kolicina</th>
+                        <th>Cena bez pdv-a</th>
+                        <th>PDV</th>
+                        <th>Ukupna cena sa pdv-om</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaIspisRacunaPosleIzboraBrojaRacunaTBody"></tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th style="background-color:#ddd"></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <br />
+    </div>
+    <button type="button" class="btn btn-primary" id="stampajRacunZaAdmina" onclick="printJS({ printable: 'zaStampuRacunZaAdmina', type: 'html', header: 'Racun/Otpremnica' })">
+        Stampaj izabrani racun
+    </button>
+}
+
+
+@*NEPRIJAVLJENI KORISNIK*@
+@*@if (User.IsInRole("User"))
+{
+    <h2>Kupovina</h2>
+    <h3>Izaberite proizvodni salon</h3>
+    <select id="racunIzborSalona">
+
+    </select>
+    <select id="racunIzborProizvoda">
+
+    </select>
+    <button>Nastavi kupovinu</button>
+    <button>Zavrsi kupovinu</button>
+}*@
+
+@*<button type="button" onclick="printJS({ printable: myJSON, properties: ['Porez', 'CenaBezPdv', 'BrojRacuna'], type: 'json' })">
+    Print JSON Data
+</button>*@
+
+
+
+@*<button type="button" onclick="printJS('tblRacun', 'html')">
+    Print Form
+</button>*@
+
+@*<button type="button" onclick="printJS({ printable: 'tblRacun', type: 'html', header: 'Racun/otpremnica' })">
+    Print Form with Header
+</button>*@

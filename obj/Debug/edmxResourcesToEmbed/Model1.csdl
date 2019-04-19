@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProdavnicaNamestajaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblKategorijaNamestaja">
+    <Key>
+      <PropertyRef Name="KategroijaNamestajaId" />
+    </Key>
+    <Property Name="KategroijaNamestajaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblKomadNamestajas" Relationship="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja" FromRole="tblKategorijaNamestaja" ToRole="tblKomadNamestaja" />
+  </EntityType>
+  <EntityType Name="tblKomadNamestaja">
+    <Key>
+      <PropertyRef Name="KomadNamestajaId" />
+    </Key>
+    <Property Name="KomadNamestajaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sifra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ZemljaProizvodnje" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GodinaProizvodnje" Type="Int32" />
+    <Property Name="JedinicnaCena" Type="Double" Nullable="false" />
+    <Property Name="KolicinaUMagacinu" Type="Int32" Nullable="false" />
+    <Property Name="SalonId" Type="Int32" Nullable="false" />
+    <Property Name="KategorijaNamestajaId" Type="Int32" Nullable="false" />
+    <Property Name="Slika" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="tblKategorijaNamestaja" Relationship="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja" FromRole="tblKomadNamestaja" ToRole="tblKategorijaNamestaja" />
+    <NavigationProperty Name="tblSalon" Relationship="Self.FK_tblKomadNamestaja_tblSalon" FromRole="tblKomadNamestaja" ToRole="tblSalon" />
+    <NavigationProperty Name="tblRacuns" Relationship="Self.FK_tblRacun_tblKomadNamestaja" FromRole="tblKomadNamestaja" ToRole="tblRacun" />
+  </EntityType>
+  <EntityType Name="tblRacun">
+    <Key>
+      <PropertyRef Name="RacunId" />
+    </Key>
+    <Property Name="RacunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KomadNamestajaId" Type="Int32" Nullable="false" />
+    <Property Name="Porez" Type="Double" Nullable="false" />
+    <Property Name="UkupnaCenaSaPorezom" Type="Double" Nullable="false" />
+    <Property Name="DatumIVremeKupovine" Type="String" MaxLength="50" Nullable="false" Unicode="true" FixedLength="false" />
+    <Property Name="KupacKojiJeKupioRobu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tblKomadNamestaja" Relationship="Self.FK_tblRacun_tblKomadNamestaja" FromRole="tblRacun" ToRole="tblKomadNamestaja" />
+    <Property Name="SalonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblSalon" Relationship="ProdavnicaNamestajaModel.FK_tblRacun_tblSalon" FromRole="tblRacun" ToRole="tblSalon" />
+    <Property Name="CenaBezPdv" Type="Double" Nullable="false" />
+    <Property Name="BrojRacuna" Type="Int32" Nullable="false" />
+    <Property Name="Uknjizeno" Type="Boolean" Nullable="false" />
+    <Property Name="Kolicina" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSalon">
+    <Key>
+      <PropertyRef Name="SalonId" />
+    </Key>
+    <Property Name="SalonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Vlasnik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adresa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefon" Type="Int64" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WebStranica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PIB" Type="Int64" Nullable="false" />
+    <Property Name="BrojZiroRacuna" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tblKomadNamestajas" Relationship="Self.FK_tblKomadNamestaja_tblSalon" FromRole="tblSalon" ToRole="tblKomadNamestaja" />
+    <NavigationProperty Name="tblRacuns" Relationship="ProdavnicaNamestajaModel.FK_tblRacun_tblSalon" FromRole="tblSalon" ToRole="tblRacun" />
+  </EntityType>
+  <Association Name="FK_tblKomadNamestaja_tblKategorijaNamestaja">
+    <End Role="tblKategorijaNamestaja" Type="Self.tblKategorijaNamestaja" Multiplicity="1" />
+    <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKategorijaNamestaja">
+        <PropertyRef Name="KategroijaNamestajaId" />
+      </Principal>
+      <Dependent Role="tblKomadNamestaja">
+        <PropertyRef Name="KategorijaNamestajaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKomadNamestaja_tblSalon">
+    <End Role="tblSalon" Type="Self.tblSalon" Multiplicity="1" />
+    <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSalon">
+        <PropertyRef Name="SalonId" />
+      </Principal>
+      <Dependent Role="tblKomadNamestaja">
+        <PropertyRef Name="SalonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRacun_tblKomadNamestaja">
+    <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="1" />
+    <End Role="tblRacun" Type="Self.tblRacun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKomadNamestaja">
+        <PropertyRef Name="KomadNamestajaId" />
+      </Principal>
+      <Dependent Role="tblRacun">
+        <PropertyRef Name="KomadNamestajaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProdavnicaNamestajaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tblKategorijaNamestajas" EntityType="Self.tblKategorijaNamestaja" />
+    <EntitySet Name="tblKomadNamestajas" EntityType="Self.tblKomadNamestaja" />
+    <EntitySet Name="tblRacuns" EntityType="Self.tblRacun" />
+    <EntitySet Name="tblSalons" EntityType="Self.tblSalon" />
+    <AssociationSet Name="FK_tblKomadNamestaja_tblKategorijaNamestaja" Association="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja">
+      <End Role="tblKategorijaNamestaja" EntitySet="tblKategorijaNamestajas" />
+      <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestajas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKomadNamestaja_tblSalon" Association="Self.FK_tblKomadNamestaja_tblSalon">
+      <End Role="tblSalon" EntitySet="tblSalons" />
+      <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestajas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRacun_tblKomadNamestaja" Association="Self.FK_tblRacun_tblKomadNamestaja">
+      <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestajas" />
+      <End Role="tblRacun" EntitySet="tblRacuns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRacun_tblSalon" Association="ProdavnicaNamestajaModel.FK_tblRacun_tblSalon">
+      <End Role="tblSalon" EntitySet="tblSalons" />
+      <End Role="tblRacun" EntitySet="tblRacuns" />
+    </AssociationSet>
+    <EntitySet Name="AspNetUsers" EntityType="ProdavnicaNamestajaModel.AspNetUser" />
+  </EntityContainer>
+  <Association Name="FK_tblRacun_tblSalon">
+    <End Type="ProdavnicaNamestajaModel.tblSalon" Role="tblSalon" Multiplicity="1" />
+    <End Type="ProdavnicaNamestajaModel.tblRacun" Role="tblRacun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSalon">
+        <PropertyRef Name="SalonId" />
+      </Principal>
+      <Dependent Role="tblRacun">
+        <PropertyRef Name="SalonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Prezime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adresa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

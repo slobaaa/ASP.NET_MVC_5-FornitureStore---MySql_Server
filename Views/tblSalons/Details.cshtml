@@ -1,0 +1,82 @@
+﻿@model shanuMVCUserRoles.tblSalon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSalon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vlasnik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vlasnik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebStranica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebStranica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PIB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PIB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrojZiroRacuna)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrojZiroRacuna)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SalonId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

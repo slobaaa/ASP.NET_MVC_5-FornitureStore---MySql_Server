@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProdavnicaNamestajaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Ime" Type="nvarchar(max)" />
+          <Property Name="Prezime" Type="nvarchar(max)" />
+          <Property Name="Adresa" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblKategorijaNamestaja">
+          <Key>
+            <PropertyRef Name="KategroijaNamestajaId" />
+          </Key>
+          <Property Name="KategroijaNamestajaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Opis" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tblKomadNamestaja">
+          <Key>
+            <PropertyRef Name="KomadNamestajaId" />
+          </Key>
+          <Property Name="KomadNamestajaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sifra" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ZemljaProizvodnje" Type="nvarchar" MaxLength="50" />
+          <Property Name="GodinaProizvodnje" Type="int" />
+          <Property Name="JedinicnaCena" Type="float" Nullable="false" />
+          <Property Name="KolicinaUMagacinu" Type="int" Nullable="false" />
+          <Property Name="SalonId" Type="int" Nullable="false" />
+          <Property Name="KategorijaNamestajaId" Type="int" Nullable="false" />
+          <Property Name="Slika" Type="image" />
+        </EntityType>
+        <EntityType Name="tblRacun">
+          <Key>
+            <PropertyRef Name="RacunId" />
+          </Key>
+          <Property Name="RacunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KomadNamestajaId" Type="int" Nullable="false" />
+          <Property Name="Porez" Type="float" Nullable="false" />
+          <Property Name="CenaBezPdv" Type="float" Nullable="false" />
+          <Property Name="UkupnaCenaSaPorezom" Type="float" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="DatumIVremeKupovine" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="KupacKojiJeKupioRobu" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SalonId" Type="int" Nullable="false" />
+          <Property Name="BrojRacuna" Type="int" Nullable="false" />
+          <Property Name="Uknjizeno" Type="bit" Nullable="false" />
+          <Property Name="Kolicina" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSalon">
+          <Key>
+            <PropertyRef Name="SalonId" />
+          </Key>
+          <Property Name="SalonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vlasnik" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Adresa" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Telefon" Type="bigint" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="WebStranica" Type="nvarchar" MaxLength="50" />
+          <Property Name="PIB" Type="bigint" Nullable="false" />
+          <Property Name="BrojZiroRacuna" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tblKomadNamestaja_tblKategorijaNamestaja">
+          <End Role="tblKategorijaNamestaja" Type="Self.tblKategorijaNamestaja" Multiplicity="1" />
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKategorijaNamestaja">
+              <PropertyRef Name="KategroijaNamestajaId" />
+            </Principal>
+            <Dependent Role="tblKomadNamestaja">
+              <PropertyRef Name="KategorijaNamestajaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblKomadNamestaja_tblKategorijaNamestaja1">
+          <End Role="tblKategorijaNamestaja" Type="Self.tblKategorijaNamestaja" Multiplicity="1" />
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKategorijaNamestaja">
+              <PropertyRef Name="KategroijaNamestajaId" />
+            </Principal>
+            <Dependent Role="tblKomadNamestaja">
+              <PropertyRef Name="KategorijaNamestajaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblKomadNamestaja_tblSalon">
+          <End Role="tblSalon" Type="Self.tblSalon" Multiplicity="1" />
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSalon">
+              <PropertyRef Name="SalonId" />
+            </Principal>
+            <Dependent Role="tblKomadNamestaja">
+              <PropertyRef Name="SalonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblKomadNamestaja_tblSalon1">
+          <End Role="tblSalon" Type="Self.tblSalon" Multiplicity="1" />
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSalon">
+              <PropertyRef Name="SalonId" />
+            </Principal>
+            <Dependent Role="tblKomadNamestaja">
+              <PropertyRef Name="SalonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRacun_tblKomadNamestaja">
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="1" />
+          <End Role="tblRacun" Type="Self.tblRacun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKomadNamestaja">
+              <PropertyRef Name="KomadNamestajaId" />
+            </Principal>
+            <Dependent Role="tblRacun">
+              <PropertyRef Name="KomadNamestajaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRacun_tblSalon">
+          <End Role="tblSalon" Type="Self.tblSalon" Multiplicity="1" />
+          <End Role="tblRacun" Type="Self.tblRacun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSalon">
+              <PropertyRef Name="SalonId" />
+            </Principal>
+            <Dependent Role="tblRacun">
+              <PropertyRef Name="SalonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProdavnicaNamestajaModelStoreContainer">
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblKategorijaNamestaja" EntityType="Self.tblKategorijaNamestaja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblKomadNamestaja" EntityType="Self.tblKomadNamestaja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblRacun" EntityType="Self.tblRacun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSalon" EntityType="Self.tblSalon" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblKomadNamestaja_tblKategorijaNamestaja" Association="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja">
+            <End Role="tblKategorijaNamestaja" EntitySet="tblKategorijaNamestaja" />
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblKomadNamestaja_tblKategorijaNamestaja1" Association="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja1">
+            <End Role="tblKategorijaNamestaja" EntitySet="tblKategorijaNamestaja" />
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblKomadNamestaja_tblSalon" Association="Self.FK_tblKomadNamestaja_tblSalon">
+            <End Role="tblSalon" EntitySet="tblSalon" />
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblKomadNamestaja_tblSalon1" Association="Self.FK_tblKomadNamestaja_tblSalon1">
+            <End Role="tblSalon" EntitySet="tblSalon" />
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRacun_tblKomadNamestaja" Association="Self.FK_tblRacun_tblKomadNamestaja">
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestaja" />
+            <End Role="tblRacun" EntitySet="tblRacun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRacun_tblSalon" Association="Self.FK_tblRacun_tblSalon">
+            <End Role="tblSalon" EntitySet="tblSalon" />
+            <End Role="tblRacun" EntitySet="tblRacun" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProdavnicaNamestajaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblKategorijaNamestaja">
+          <Key>
+            <PropertyRef Name="KategroijaNamestajaId" />
+          </Key>
+          <Property Name="KategroijaNamestajaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblKomadNamestajas" Relationship="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja" FromRole="tblKategorijaNamestaja" ToRole="tblKomadNamestaja" />
+        </EntityType>
+        <EntityType Name="tblKomadNamestaja">
+          <Key>
+            <PropertyRef Name="KomadNamestajaId" />
+          </Key>
+          <Property Name="KomadNamestajaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sifra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ZemljaProizvodnje" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GodinaProizvodnje" Type="Int32" />
+          <Property Name="JedinicnaCena" Type="Double" Nullable="false" />
+          <Property Name="KolicinaUMagacinu" Type="Int32" Nullable="false" />
+          <Property Name="SalonId" Type="Int32" Nullable="false" />
+          <Property Name="KategorijaNamestajaId" Type="Int32" Nullable="false" />
+          <Property Name="Slika" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="tblKategorijaNamestaja" Relationship="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja" FromRole="tblKomadNamestaja" ToRole="tblKategorijaNamestaja" />
+          <NavigationProperty Name="tblSalon" Relationship="Self.FK_tblKomadNamestaja_tblSalon" FromRole="tblKomadNamestaja" ToRole="tblSalon" />
+          <NavigationProperty Name="tblRacuns" Relationship="Self.FK_tblRacun_tblKomadNamestaja" FromRole="tblKomadNamestaja" ToRole="tblRacun" />
+        </EntityType>
+        <EntityType Name="tblRacun">
+          <Key>
+            <PropertyRef Name="RacunId" />
+          </Key>
+          <Property Name="RacunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KomadNamestajaId" Type="Int32" Nullable="false" />
+          <Property Name="Porez" Type="Double" Nullable="false" />
+          <Property Name="UkupnaCenaSaPorezom" Type="Double" Nullable="false" />
+          <Property Name="DatumIVremeKupovine" Type="String" MaxLength="50" Nullable="false" Unicode="true" FixedLength="false" />
+          <Property Name="KupacKojiJeKupioRobu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tblKomadNamestaja" Relationship="Self.FK_tblRacun_tblKomadNamestaja" FromRole="tblRacun" ToRole="tblKomadNamestaja" />
+          <Property Name="SalonId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblSalon" Relationship="ProdavnicaNamestajaModel.FK_tblRacun_tblSalon" FromRole="tblRacun" ToRole="tblSalon" />
+          <Property Name="CenaBezPdv" Type="Double" Nullable="false" />
+          <Property Name="BrojRacuna" Type="Int32" Nullable="false" />
+          <Property Name="Uknjizeno" Type="Boolean" Nullable="false" />
+          <Property Name="Kolicina" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSalon">
+          <Key>
+            <PropertyRef Name="SalonId" />
+          </Key>
+          <Property Name="SalonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Vlasnik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adresa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefon" Type="Int64" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WebStranica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PIB" Type="Int64" Nullable="false" />
+          <Property Name="BrojZiroRacuna" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tblKomadNamestajas" Relationship="Self.FK_tblKomadNamestaja_tblSalon" FromRole="tblSalon" ToRole="tblKomadNamestaja" />
+          <NavigationProperty Name="tblRacuns" Relationship="ProdavnicaNamestajaModel.FK_tblRacun_tblSalon" FromRole="tblSalon" ToRole="tblRacun" />
+        </EntityType>
+        <Association Name="FK_tblKomadNamestaja_tblKategorijaNamestaja">
+          <End Role="tblKategorijaNamestaja" Type="Self.tblKategorijaNamestaja" Multiplicity="1" />
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKategorijaNamestaja">
+              <PropertyRef Name="KategroijaNamestajaId" />
+            </Principal>
+            <Dependent Role="tblKomadNamestaja">
+              <PropertyRef Name="KategorijaNamestajaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblKomadNamestaja_tblSalon">
+          <End Role="tblSalon" Type="Self.tblSalon" Multiplicity="1" />
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSalon">
+              <PropertyRef Name="SalonId" />
+            </Principal>
+            <Dependent Role="tblKomadNamestaja">
+              <PropertyRef Name="SalonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRacun_tblKomadNamestaja">
+          <End Role="tblKomadNamestaja" Type="Self.tblKomadNamestaja" Multiplicity="1" />
+          <End Role="tblRacun" Type="Self.tblRacun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKomadNamestaja">
+              <PropertyRef Name="KomadNamestajaId" />
+            </Principal>
+            <Dependent Role="tblRacun">
+              <PropertyRef Name="KomadNamestajaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProdavnicaNamestajaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="tblKategorijaNamestajas" EntityType="Self.tblKategorijaNamestaja" />
+          <EntitySet Name="tblKomadNamestajas" EntityType="Self.tblKomadNamestaja" />
+          <EntitySet Name="tblRacuns" EntityType="Self.tblRacun" />
+          <EntitySet Name="tblSalons" EntityType="Self.tblSalon" />
+          <AssociationSet Name="FK_tblKomadNamestaja_tblKategorijaNamestaja" Association="Self.FK_tblKomadNamestaja_tblKategorijaNamestaja">
+            <End Role="tblKategorijaNamestaja" EntitySet="tblKategorijaNamestajas" />
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestajas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblKomadNamestaja_tblSalon" Association="Self.FK_tblKomadNamestaja_tblSalon">
+            <End Role="tblSalon" EntitySet="tblSalons" />
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestajas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRacun_tblKomadNamestaja" Association="Self.FK_tblRacun_tblKomadNamestaja">
+            <End Role="tblKomadNamestaja" EntitySet="tblKomadNamestajas" />
+            <End Role="tblRacun" EntitySet="tblRacuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRacun_tblSalon" Association="ProdavnicaNamestajaModel.FK_tblRacun_tblSalon">
+            <End Role="tblSalon" EntitySet="tblSalons" />
+            <End Role="tblRacun" EntitySet="tblRacuns" />
+          </AssociationSet>
+          <EntitySet Name="AspNetUsers" EntityType="ProdavnicaNamestajaModel.AspNetUser" />
+        </EntityContainer>
+        <Association Name="FK_tblRacun_tblSalon">
+          <End Type="ProdavnicaNamestajaModel.tblSalon" Role="tblSalon" Multiplicity="1" />
+          <End Type="ProdavnicaNamestajaModel.tblRacun" Role="tblRacun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSalon">
+              <PropertyRef Name="SalonId" />
+            </Principal>
+            <Dependent Role="tblRacun">
+              <PropertyRef Name="SalonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Prezime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Adresa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProdavnicaNamestajaModelStoreContainer" CdmEntityContainer="ProdavnicaNamestajaEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ProdavnicaNamestajaModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKategorijaNamestajas">
+            <EntityTypeMapping TypeName="ProdavnicaNamestajaModel.tblKategorijaNamestaja">
+              <MappingFragment StoreEntitySet="tblKategorijaNamestaja">
+                <ScalarProperty Name="KategroijaNamestajaId" ColumnName="KategroijaNamestajaId" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKomadNamestajas">
+            <EntityTypeMapping TypeName="ProdavnicaNamestajaModel.tblKomadNamestaja">
+              <MappingFragment StoreEntitySet="tblKomadNamestaja">
+                <ScalarProperty Name="KomadNamestajaId" ColumnName="KomadNamestajaId" />
+                <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="ZemljaProizvodnje" ColumnName="ZemljaProizvodnje" />
+                <ScalarProperty Name="GodinaProizvodnje" ColumnName="GodinaProizvodnje" />
+                <ScalarProperty Name="JedinicnaCena" ColumnName="JedinicnaCena" />
+                <ScalarProperty Name="KolicinaUMagacinu" ColumnName="KolicinaUMagacinu" />
+                <ScalarProperty Name="SalonId" ColumnName="SalonId" />
+                <ScalarProperty Name="KategorijaNamestajaId" ColumnName="KategorijaNamestajaId" />
+                <ScalarProperty Name="Slika" ColumnName="Slika" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRacuns">
+            <EntityTypeMapping TypeName="ProdavnicaNamestajaModel.tblRacun">
+              <MappingFragment StoreEntitySet="tblRacun">
+                <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+                <ScalarProperty Name="Uknjizeno" ColumnName="Uknjizeno" />
+                <ScalarProperty Name="BrojRacuna" ColumnName="BrojRacuna" />
+                <ScalarProperty Name="CenaBezPdv" ColumnName="CenaBezPdv" />
+                <ScalarProperty Name="SalonId" ColumnName="SalonId" />
+                <ScalarProperty Name="RacunId" ColumnName="RacunId" />
+                <ScalarProperty Name="KomadNamestajaId" ColumnName="KomadNamestajaId" />
+                <ScalarProperty Name="Porez" ColumnName="Porez" />
+                <ScalarProperty Name="UkupnaCenaSaPorezom" ColumnName="UkupnaCenaSaPorezom" />
+                <ScalarProperty Name="DatumIVremeKupovine" ColumnName="DatumIVremeKupovine" />
+                <ScalarProperty Name="KupacKojiJeKupioRobu" ColumnName="KupacKojiJeKupioRobu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSalons">
+            <EntityTypeMapping TypeName="ProdavnicaNamestajaModel.tblSalon">
+              <MappingFragment StoreEntitySet="tblSalon">
+                <ScalarProperty Name="SalonId" ColumnName="SalonId" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Vlasnik" ColumnName="Vlasnik" />
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="WebStranica" ColumnName="WebStranica" />
+                <ScalarProperty Name="PIB" ColumnName="PIB" />
+                <ScalarProperty Name="BrojZiroRacuna" ColumnName="BrojZiroRacuna" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="ProdavnicaNamestajaModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

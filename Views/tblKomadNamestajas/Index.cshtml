@@ -1,0 +1,166 @@
+﻿@model IEnumerable<shanuMVCUserRoles.tblKomadNamestaja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-primary">Komadi namestaja</h2>
+
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+<table class="table table-striped table-hover" id="tblKomadNamestaja">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sifra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZemljaProizvodnje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GodinaProizvodnje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JedinicnaCena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KolicinaUMagacinu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tblKategorijaNamestaja.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tblSalon.Naziv)
+            </th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sifra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ZemljaProizvodnje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GodinaProizvodnje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JedinicnaCena)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KolicinaUMagacinu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slika)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblKategorijaNamestaja.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblSalon.Naziv)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.KomadNamestajaId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.KomadNamestajaId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.KomadNamestajaId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+
+@if (User.IsInRole("User"))
+{
+    <table class="table table-striped table-hover" id="tblKomadNamestaja">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sifra)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naziv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ZemljaProizvodnje)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GodinaProizvodnje)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JedinicnaCena)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KolicinaUMagacinu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Slika)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tblKategorijaNamestaja.Naziv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tblSalon.Naziv)
+                </th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sifra)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naziv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ZemljaProizvodnje)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GodinaProizvodnje)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JedinicnaCena)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KolicinaUMagacinu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Slika)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tblKategorijaNamestaja.Naziv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tblSalon.Naziv)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Detalji", "Details", new { id = item.KomadNamestajaId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

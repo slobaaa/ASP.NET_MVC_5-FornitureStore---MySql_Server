@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Naslovna strana";
+}
+@*<h1 class="text-primary text-center">Dobrodošli u prodavnicu nameštaja</h1>
+<br />
+<h2 class="text-danger text-center">Autor: Slobodan Vujčin</h2>*@
+
+    <div class="container">
+        <h1 class="ml5 text-center text-primary">
+            <span class="text-wrapper text-center text-primary">
+                <span class="line line1"></span>
+                <span class="letters letters-left text-primary">Prodavnica</span>
+                @*<span class="letters ampersand">&amp;</span>*@
+                <span class="letters letters-right">nameštaja</span>
+                <span class="line line2"></span>
+            </span>
+        </h1>
+    </div>
+    <h1 class="ml6 text-center" style="display:none">
+        <span class="text-wrapper text-center">
+            <span class="letters text-danger">by Slobodan Vujčin</span>
+        </span>
+    </h1>
+
+    <script>
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.ml5 .line',
+                opacity: [0.5, 1],
+                scaleX: [0, 1],
+                easing: "easeInOutExpo",
+                duration: 700
+            }).add({
+                targets: '.ml5 .line',
+                duration: 600,
+                easing: "easeOutExpo",
+                translateY: function (e, i, l) {
+                    var offset = -0.625 + 0.625 * 2 * i;
+                    return offset + "em";
+                }
+            }).add({
+                targets: '.ml5 .ampersand',
+                opacity: [0, 1],
+                scaleY: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.ml5 .letters-left',
+                opacity: [0, 1],
+                translateX: ["0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=300'
+            }).add({
+                targets: '.ml5 .letters-right',
+                opacity: [0, 1],
+                translateX: ["-0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.ml5',
+                opacity: 1,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
+
+    <script>
+        // Wrap every letter in a span
+        $('.ml6 .letters').each(function () {
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+        });
+
+        setTimeout(function () {
+            $(".ml6").show();
+            anime.timeline({ loop: false })
+              .add({
+                  targets: '.ml6 .letter',
+                  translateY: ["1.1em", 0],
+                  translateZ: 0,
+                  duration: 750,
+                  delay: function (el, i) {
+                      return 50 * i;
+                  }
+              }).add({
+                  targets: '.ml6',
+                  opacity: 1,
+                  duration: 1000,
+                  easing: "easeOutExpo",
+                  delay: 1000
+              });
+        }, 1000);
+
+
+    </script>
+
+
+
+
+
+@*fulscreen carousel*@
+  <!-- fullscreen -->
+

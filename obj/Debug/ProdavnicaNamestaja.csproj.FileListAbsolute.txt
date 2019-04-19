@@ -1,0 +1,228 @@
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\csc.exe
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\vbc.exe
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\shanuMVCUserRoles.dll.config
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\shanuMVCUserRoles.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\shanuMVCUserRoles.pdb
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Antlr3.Runtime.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\EntityFramework.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\EntityFramework.SqlServer.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Newtonsoft.Json.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Owin.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Helpers.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Mvc.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Optimization.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Razor.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.WebPages.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\WebGrease.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Helpers.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Mvc.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Optimization.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.Razor.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.WebPages.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Antlr3.Runtime.pdb
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Newtonsoft.Json.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\EntityFramework.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\EntityFramework.SqlServer.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\obj\Debug\ProdavnicaNamestaja.csprojResolveAssemblyReference.cache
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.InitialCreate.resources
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.InitialCreate1.resources
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\obj\Debug\ProdavnicaNamestaja.csproj.GenerateResource.Cache
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.dll
+C:\Users\Sloba\Downloads\ASP.NET MVC 5 Security And Creating User Role\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\csc.exe
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\vbc.exe
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\shanuMVCUserRoles.dll.config
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\shanuMVCUserRoles.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\shanuMVCUserRoles.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Antlr3.Runtime.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\EntityFramework.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\EntityFramework.SqlServer.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Newtonsoft.Json.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Owin.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Helpers.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Mvc.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Optimization.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Razor.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.WebPages.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\WebGrease.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Helpers.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Mvc.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Optimization.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.Razor.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.WebPages.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Antlr3.Runtime.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Newtonsoft.Json.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\EntityFramework.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\EntityFramework.SqlServer.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\obj\Debug\ProdavnicaNamestaja.csprojResolveAssemblyReference.cache
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\obj\Debug\ProdavnicaNamestaja.Migrations.InitialCreate.resources
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\obj\Debug\ProdavnicaNamestaja.Migrations.InitialCreate1.resources
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\obj\Debug\ProdavnicaNamestaja.csproj.GenerateResource.Cache
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\csc.exe
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\vbc.exe
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\shanuMVCUserRoles.dll.config
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\shanuMVCUserRoles.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\shanuMVCUserRoles.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Antlr3.Runtime.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\EntityFramework.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\EntityFramework.SqlServer.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Newtonsoft.Json.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Owin.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Helpers.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Mvc.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Optimization.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Razor.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.WebPages.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\WebGrease.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Helpers.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Mvc.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Optimization.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Razor.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.WebPages.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Antlr3.Runtime.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Newtonsoft.Json.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\EntityFramework.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\EntityFramework.SqlServer.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\obj\Debug\shanuMVCUserRoles.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\obj\Debug\shanuMVCUserRoles.pdb
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Net.Http.Formatting.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Http.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Http.WebHost.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Net.Http.Formatting.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Http.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\System.Web.Http.WebHost.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\obj\Debug\RdlCompile.cache
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\obj\Debug\RdlCompile.compiled
+C:\Users\Sloba\Documents\Visual Studio 2015\Projects\ProdavnicaNamestaja\ProdavnicaNamestaja\obj\Debug\ProdavnicaNamestaja.csprojResolveAssemblyReference.cache

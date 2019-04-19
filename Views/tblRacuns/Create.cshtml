@@ -1,0 +1,152 @@
+﻿@model shanuMVCUserRoles.tblRacun
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="text-primary">Kreiranje novog računa</h2>
+
+<button type="button" class="btn btn-primary zapocniRacun" onclick="zapocniRacun()">Započni racun</button>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Detalji racuna</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalonId, "SalonId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.DropDownList("SalonId", null, htmlAttributes: new { @class = "form-control spisakSalonaKodRacuna", onchange = "ispisKomadaNamestajaPosleIzabranogSalonaKodRacuna()", onclick= "ispisiBrojRacunaIzBaze()" })*@
+                @Html.DropDownList("SalonId", null, htmlAttributes: new { @class = "form-control spisakSalonaKodRacuna", onchange = "ispisKomadaNamestajaPosleIzabranogSalonaKodRacuna()", onclick="otkljucajPolja()", disabled = "disabled" })
+                @Html.ValidationMessageFor(model => model.SalonId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<select class="form-control" id="spisakSalonaKodRacuna" name="salonDropdown" onchange="ispisKomadaNamestajaPosleIzabranogSalonaKodRacuna()"></select>*@
+        
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KomadNamestajaId, "KomadNamestajaId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10"> 
+                @*@Html.DropDownList("KomadNamestajaId", null, htmlAttributes: new { @class = "form-control dropDownIzborNamestajaURacunu", onchange = "ipisCeneBezPdvKodKreiranjaRacuna();", onclick = "ispisiBrojRacunaIzBaze()",  })*@
+                @Html.DropDownList("KomadNamestajaId", null, htmlAttributes: new { @class = "form-control dropDownIzborNamestajaURacunu", onchange = "ipisCeneBezPdvKodKreiranjaRacuna();", disabled = "disabled" })
+                @Html.ValidationMessageFor(model => model.KomadNamestajaId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kolicina, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Kolicina, new { htmlAttributes = new { @class = "form-control kolicinaURacunu", disabled = "disabled", onfocusout= "ipisCeneBezPdvKodKreiranjaRacuna();", min=1 } })
+                @Html.ValidationMessageFor(model => model.Kolicina, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Porez, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Porez, new { htmlAttributes = new { @class = "form-control porez", @readonly = "true", @Value = "20" } })
+                @Html.ValidationMessageFor(model => model.Porez, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UkupnaCenaSaPorezom, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UkupnaCenaSaPorezom, new { htmlAttributes = new { @class = "form-control txtUkupnaCenaSaPdv", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.UkupnaCenaSaPorezom, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DatumIVremeKupovine, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DatumIVremeKupovine, new { htmlAttributes = new { @class = "form-control datumIVreme", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.DatumIVremeKupovine, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.KupacKojiJeKupioRobu, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KupacKojiJeKupioRobu, new { htmlAttributes = new { @class = "form-control kupacKojiJeKupioRobu", @Value = @User.Identity.Name, @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.KupacKojiJeKupioRobu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CenaBezPdv, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CenaBezPdv, new { htmlAttributes = new { @class = "form-control txtCenaZaDobijanjeIzBaze", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.CenaBezPdv, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="display:none">
+            @Html.LabelFor(model => model.BrojRacuna, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BrojRacuna, new { htmlAttributes = new { @class = "form-control brojRacunaIzBaze", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.BrojRacuna, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*ovde treba da dodam za uknjizeno*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @*<input type="submit" value="Zavrsi kupovinu" class="btn btn-default" />*@
+                <input type="button" value="Zavrsi kupovinu" class="btn btn-primary zavrsiKupovinu" onclick="zavrsiKupovinu()" disabled = "disabled"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @*<input type="button" value="Dodaj novi artikal" class="btn btn-default" onclick="ispisiBrojRacunaIzBaze(), dodajNoviArtikal()" />*@
+                <input type="button" value="Dodaj novi artikal" class="btn btn-warning dodajNoviArtikal" onclick="dodajNoviArtikal()" disabled = "disabled" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Storniraj racun" class="btn btn-danger stornirajRacun" onclick="stornirajRacun()" disabled = "disabled"/>
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+
+@*ovde ide trenutni racun*@
+@if (User.IsInRole("User"))
+{
+    <table id="tblRacunTrenutni" class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Komad nameštaja</th>
+                <th>Količina</th>
+                <th>Cena bez pdv-a</th>
+                <th>PDV</th>
+                <th>Ukupna cena sa pdv</th>
+            </tr>
+        </thead>
+        <tbody id="tblRacunTrenutniTBody"></tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Ukupno za uplatu:</th>
+            </tr>
+        </tfoot>
+    </table>
+}
+
+<button type="button" class="btn btn-primary disabled" id="stampajRacun" onclick="printJS({ printable: 'tblRacunTrenutni', type: 'html', header: 'Racun/otpremnica' }), backToListRacun()">
+    Štampaj račun
+</button>

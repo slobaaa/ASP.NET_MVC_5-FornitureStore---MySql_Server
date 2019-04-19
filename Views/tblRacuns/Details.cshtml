@@ -1,0 +1,98 @@
+﻿@model shanuMVCUserRoles.tblRacun
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblRacun</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Porez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Porez)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UkupnaCenaSaPorezom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UkupnaCenaSaPorezom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumIVremeKupovine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumIVremeKupovine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KupacKojiJeKupioRobu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KupacKojiJeKupioRobu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CenaBezPdv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CenaBezPdv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrojRacuna)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrojRacuna)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uknjizeno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uknjizeno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kolicina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kolicina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblKomadNamestaja.Sifra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblKomadNamestaja.Sifra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSalon.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSalon.Naziv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RacunId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
